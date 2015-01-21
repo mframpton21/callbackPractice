@@ -107,6 +107,19 @@ uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
 
+// OR another solution
+var uniq = function(array, callback) {
+return callback(array.sort().filter(function(item, pos) {
+        return !pos || item != array[pos - 1];
+    }))
+};
+
+//Code provided
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+uniq(names, function(uniqArr){
+  console.log('The new names array with all the duplicate items removed is ', uniqArr);
+});
+
 
 
 // PROBLEM 6 - NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM
