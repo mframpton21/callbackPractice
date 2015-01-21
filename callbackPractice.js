@@ -98,7 +98,7 @@ var uniq = function(array, callback) {
       newArray.push(array[i]);
     }
   }
-  callback(newArray);
+  return callback(newArray);
 };
 
 //Code provided
